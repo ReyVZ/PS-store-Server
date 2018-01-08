@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>
+    {% block title %}
+    PS 4 Store/
+    {% endblock %}
+  </title>
+  {% block css %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  {% endblock %}
+</head>
+
+<body>
+  <div class="container">
+  {% block js %}
+      <script src="{% static 'js/jquery-2.1.4.min.js' %}"></script>
+      <script src="{% static 'js/create_user.js' %}"></script>
+  {% endblock %}
+  {#<div id="csrfmiddlewaretoken" style="display: none;">{% csrf_token %}</div>#}
+
+    {% block header %}
+    <div class="header">
+      <div class="logo">
+      </div>
+      <div class="brand">
+        <p>Одминка</p>
+      </div>
+      
+    </div>
+    <hr>
+    <div class="to_users">
+        {% block menu %}
+            /<a href="#">Юзеры</a>/
+        {% endblock %}
+    </div>
+    {% endblock %}
+
+    {% block content %}
+      base % context % template
+    {% endblock %}    
+
+    {% block footer %}
+    <hr>
+    <div class="footer">
+      <p>&copy; Все права похищены {% now "Y" %}</p>
+    </div>
+    {% endblock %}
+
+  </div>
+</body>
+
+</html>

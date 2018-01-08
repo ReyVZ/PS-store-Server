@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+<head>
+	<title>Одминка</title>
+	{% block css %}
+		<link rel="stylesheet" href="{% static 'css/style.css' %}">
+	{% endblock %}
+</head>
+<body>
+	<div>
+		<h1>Админка</h1>
+		{% block menu %}
+		<div>
+			{% include 'adminapp/includes/inc_menu.html' %}
+		</div>
+		{% endblock %}
+		
+		{% block content %}
+		{% endblock %}
+	</div>
+</body>
+</html>

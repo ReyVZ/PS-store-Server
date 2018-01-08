@@ -1,0 +1,38 @@
+{% extends 'mainapp/base.html' %}
+{% load staticfiles %}
+
+{% block title %}
+  {{ block.super }}
+  {{ title|title }}
+{% endblock %}
+
+{% block content %}
+
+<h1>Каталог</h1>
+    <div>
+        <div class="paginator">
+            {% if products.has_previous %}
+                <a href="{% url 'catalog' products.previous_page_number %}"><</a>
+            {% endif %}
+            <span class="current">
+            страница {{ products.number }} из {{ products.paginator.num_pages }}
+            </span>
+            {% if products.has_next %}
+                <a href="{% url 'catalog' products.next_page_number %}">></a>
+            {% endif %}
+        </div>
+    </div>
+
+    <div class="prods">
+
+      {% for product in products %}
+        <div class="prod">
+          <p>{{ product.name }}</p>
+          <img src="/media/{{ product.image }}" alt="{{ product.short_desc }}" height="220">
+          <p>Цена: {{ product.price }} р.</p>
+          <a href="{% url 'driveclub' %}">Подробнее</a>
+        </div>
+      {% endfor %}
+
+    </div>  
+{% endblock %} 

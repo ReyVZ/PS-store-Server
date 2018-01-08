@@ -1,0 +1,17 @@
+{% extends "mainapp/base_admin.html" %}
+
+{% block js %}
+  {{ block.super }}
+{% endblock %}
+
+{% block content %}
+<div>
+  <ul id="users_list">
+    {% include 'mainapp/inc_users_list.html' %}
+  </ul>
+</div>
+<form id="user_form">
+  {% include 'mainapp/inc_registration_form.html' %}
+</form>
+  <input type="submit" value="Редактировать" onclick="send_data()"> 
+{% endblock %}

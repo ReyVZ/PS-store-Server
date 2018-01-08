@@ -1,0 +1,36 @@
+{% extends 'mainapp/base.html' %}
+{% load staticfiles %}
+
+{% block title %}
+  {{ block.super }}
+  {{ title|title }}
+{% endblock %}
+
+{% block content %}
+    <h1>Контакты</h1>
+    <form action="{% url 'main' %}" method="post">
+      <fieldset>
+        <legend>Напишите нам:</legend>
+        <input type="text" name="name" placeholder="Ваше имя">
+        <br>
+        <input type="email" name="email" placeholder="Ваша почта">
+        <br>
+        <input type="text" name="topic" placeholder="Тема обращения">
+        <br>
+        <p>Ваше обращение:</p>
+        <textarea name="text" rows="4" cols="80"></textarea>
+        <br>
+        <input type="submit" name="send" value="Отправить">
+      </fieldset>
+
+    </form>
+
+    <h2>Как нас найти</h2>
+    <p><b>Адрес: </b>г. Москва, ул. Рязанский проспект, д. 2, ТЦ "ГОРОД"</p>
+    <p><b>Телефон: </b>+7(987)654-32-10</p>
+    <p><b>e-mail: </b>big_bro_is@watching_for_you.lol</p>
+    <div class="map">
+      <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Af0a4b653b0d49b19e42d81186ea2681b95edc9e45dd6a90d221c9971bbd329e4&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
+
+    </div>
+{% endblock %}

@@ -1,0 +1,45 @@
+{% extends 'mainapp/base.html' %}
+{% load staticfiles %}
+
+{% block title %}
+  {{ block.super }}
+  {{ title|title }}
+{% endblock %}
+
+{% block content %}
+    <h1>Driveclub</h1>
+    <div class="pic">
+      <a href="{% static 'img/driveclub.png' %}" target="_blank"><img src="{% static 'img/driveclub.png' %}" alt="Driveclub" height="300"></a>
+    </div>
+    <div class="desc_right">
+      <h2 class="topic">Категория</h2>
+      <p class="short">Игра в жанре "гонки"</p>
+      <button type="button" name="buy">Купить</button>
+    </div>
+    <div class="desc_bottom">
+      <h2 class="topic">Характеристики</h2>
+      <div class="stat">
+        <table>
+          <tr>
+            <td>Количество автомобилей:</td>
+            <td>свыше 200</td>
+          </tr>
+          <tr>
+            <td>Количество трасс:</td>
+            <td>свыше 100</td>
+          </tr>
+          <tr>
+            <td>Возможности тюнинга:</td>
+            <td>безграничны</td>
+          </tr>
+        </table>
+      </div>
+      <h2 class="topic">Описание</h2>
+      <ul class="full">
+        <li><b><ins>Гоняйте вместе, выигрывайте вместе. Выступайте за&nbsp;свой клуб на&nbsp;самых мощных автомобилях планеты.</ins></b> Объединяйтесь с&nbsp;друзьями и&nbsp;другими игроками и&nbsp;испытайте свое водительское мастерство&nbsp;&mdash; и&nbsp;смелость&nbsp;&mdash;
+          в&nbsp;сотнях скоростных гонок и&nbsp;множестве испытаний, управляя лучшими автомобилями планеты. Создайте или вступите в&nbsp;гоночный клуб своей мечты. Или играйте в&nbsp;одиночку без подключения к&nbsp;сети.</li>
+        <li><b><ins>Вместе гоняйте. Вся прелесть клубных гонок</ins></b> DRIVECLUB&trade;&nbsp;&mdash; это игра о&nbsp;вас и&nbsp;ваших друзьях. О&nbsp;команде. О&nbsp;бесконечном соперничестве и&nbsp;общих наградах. Эта игра позволит вам вместе наслаждаться
+          каждой гонкой. Вы&nbsp;всегда на&nbsp;связи с&nbsp;друзьями и&nbsp;можете делиться захватывающими моментами, улучшать результаты своей команды, а&nbsp;также принимать вызов других игроков и&nbsp;бросать им&nbsp;вызов.</li>
+      </ul>
+    </div>
+{% endblock %}

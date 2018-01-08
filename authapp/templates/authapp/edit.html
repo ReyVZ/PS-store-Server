@@ -1,0 +1,17 @@
+{% extends 'authapp/base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+
+<form class="form-horizontal" action="{% url 'auth:edit' %}" method="post" enctype="multipart/form-data">
+	{% csrf_token %}
+	{{ edit_form.as_p}}
+	<input type="submit" class="form-control" value="Сохранить">
+</form>
+<div class="user_avatar"><img src="/media/{{ user.avatar }}"></div>
+<br>
+<a href="{% url 'main' %}" class="reg-but">На главную</a>
+<br><br>
+	
+
+{% endblock %}

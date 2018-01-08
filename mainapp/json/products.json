@@ -1,0 +1,5 @@
+[
+	{"category": "Игры", "name": "Overwatch", "image": "products_images/overwatch.jpg", "short_desc": "overwatch", "price": 3990.00},
+	{"category": "Игры", "name": "Tekken 7", "image": "products_images/tekken7.jpg", "short_desc": "tekken7", "price": 3990.00},
+	{"category": "Игры", "name": "Destiny 2", "image": "products_images/destiny2.jpg", "short_desc": "destiny2", "price": 3990.00}
+]

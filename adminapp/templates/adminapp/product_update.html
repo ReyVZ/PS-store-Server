@@ -1,0 +1,16 @@
+{% extends 'adminapp/base.html' %}
+{% load staticfiles %}
+
+
+{% block content %}
+    <div>
+        <form class="form-horizontal" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ update_form.as_p }}
+            <input class="form-control" type="submit" value="сохранить">
+        </form>
+            <a href="{% url 'admin:products' category.pk %}">
+                к списку продуктов
+            </a>
+    </div>
+{% endblock %}

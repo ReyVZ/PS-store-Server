@@ -1,0 +1,15 @@
+{% extends 'authapp/base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+<form class="form-horizontal" method="post" enctype="multipart/form-data">
+	{% csrf_token %}
+	{{ update_form.as_p }}
+	<input type="submit" value="Сохранить" class="form-control">
+</form>
+<a class="reg-but" href="{% url 'admin:users' %}">
+	К списку пользователей
+</a>
+<br>
+<br>	
+{% endblock %}

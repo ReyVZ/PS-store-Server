@@ -1,0 +1,296 @@
+body {
+  background: #f8f8f8;
+  font-family: arial;
+}
+
+.container {
+  width: 1280px;
+  margin: 0 auto;
+}
+
+.header {
+  height: 195px;
+  background-image: url("/static/img/back.jpg");
+}
+
+.errorlog {
+  clear: both;
+  float: right;
+  color: red;
+  margin-top: -45px;
+  margin-right: 12px;
+  font-style: italic;
+}
+
+.logo {
+  background-image: url("/static/img/logo.png");
+  background-size: cover;
+  float: left;
+  height: 195px;
+  width: 195px;
+  margin: 0 30px;
+}
+
+.brand {
+  font-size: 64px;
+  padding-top: 10px;
+}
+
+.login {
+  padding-top: 12px;
+  padding-right: 12px;
+  float: right;
+}
+
+
+.login input {
+  width: 177px;
+  font-size: 14px;
+}
+
+.logout {
+  padding-top: 12px;
+  padding-right: 12px;
+  float: right;
+}
+
+.logout span {
+  font-size: 20px !important;
+  font-style: italic;
+  padding-right: 12px;
+}
+
+.logout a {
+  color: white !important;
+  font-size: 20px !important;
+}
+
+.menu ul {
+  float: right;
+  margin-right: 40px;
+}
+
+.menu li {
+  list-style-type: none;
+  display: inline-block;
+  padding: 0 15px;
+}
+
+.menu a {
+  color: #06266F;
+  font-size: 32px;
+  font-style: italic;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.act a {
+  color: lightblue;
+}
+
+.menu a:hover {
+  color: #1240AB;
+}
+
+.my-login a {
+  font-size: 18px;
+  color: black;
+}
+
+.pic {
+  float: left;
+  border: 3px solid #4671D5;
+  border-radius: 5px;
+}
+
+.pic:hover {
+  border: 3px solid #f8f8f8;
+}
+
+.desc_right {
+  padding-left: 50px;
+  overflow: auto;
+}
+
+.desc_right button {
+  font-size: 18px;
+  font-weight: 800;
+  height: 40px;
+  width: 120px;
+  border: 1px solid;
+  border-radius: 5px;
+}
+
+.desc_right button:hover {
+  background-image: linear-gradient(to bottom, #FFFFFF, #5E8C9C);
+}
+
+.desc_right button:active {
+  border: 3px solid;
+}
+
+.desc_bottom {
+  clear: both;
+  padding-top: 4px;
+}
+
+.topic {
+  color: black;
+  font-size: 18px;
+  font-weight: 400;
+  background: #eaeaea;
+}
+
+.prods {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-content: space-between;
+}
+
+.prod {
+  text-align: center;
+  background-color: #DDE7EA;
+  width: 380px;
+  height: 380px;
+  margin-bottom: 20px;
+}
+
+.prod p {
+  font-size: 18px;
+  margin: 18px;
+}
+
+.prod a {
+  color: #06266F;
+  font-size: 16px;
+  font-style: italic;
+  padding-left: 12px;
+}
+
+.prod a:hover {
+  color: #4671D5;
+}
+
+.prod a:visited {
+  color: #555555;
+}
+
+.short {
+  color: #707070;
+  font-size: 14px;
+  font-style: italic;
+  line-height: 16px;
+}
+
+.full {
+  color: #484343;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+}
+
+.full li {
+  list-style-image: url("/static/img/flag.png");
+}
+
+.short::first-letter, .full li::first-letter {
+  color: #2A4480;
+  font-size: 24px;
+}
+
+.stat {
+  color: #2A4480;
+  font-size: 18px;
+  line-height: 36px;
+}
+
+.stat table {
+  border-collapse: collapse;
+}
+
+.stat td {
+  border: 1px solid #6C8CD5;
+  padding: 5px 25px;
+}
+
+.stat thead {
+  text-align: center;
+  height: 80px;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+input {
+  width: 250px;
+  height: 25px;
+  margin: 5px;
+  color: #1240AB;
+  font-size: 18px;
+  font-weight: 600;
+  font-style: italic;
+}
+
+input[type="submit"] {
+  height: 36px;
+  margin-left: 327px;
+}
+
+input[type="email"]:focus {
+  background: #4671D5;
+  color: white;
+}
+
+.map {
+  width: 100%;
+  height: 374px;
+}
+
+.footer {
+  height: 125px;
+  font-size: 18px;
+  background-image: linear-gradient(to bottom, #FFFFFF, #5E8C9C);
+}
+
+.footer p {
+  display: block;
+  float: right;
+  margin: 25px 35px;
+}
+
+.reg-but {
+  text-decoration: none;
+  border-radius: 5px;
+  border: 1px solid black;
+  padding: 10px 15px;
+  text-align: center;
+  margin: 20px;
+}
+
+.category_record {
+  display: block;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.category_name {
+  font-size: 24px;
+  margin-bottom: 50px;
+}
+
+.category_desc {
+  margin-top: 25px;
+}
+
+.not_active {
+  display: none;
+}
+
+.paginator {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
